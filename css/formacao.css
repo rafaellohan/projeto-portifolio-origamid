@@ -1,0 +1,130 @@
+.formacao {
+  background-color: #141414;
+  color: #fff;
+}
+
+.form-container {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: center;
+}
+
+.formacao .subtitulo {
+  color: #000;
+}
+
+.form-texto {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  margin-bottom: 60px;
+  max-width: 40ch; /* O texto vai ficar sempre nesse tamanho máximo */
+}
+
+.cursos-lista {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-content: start;
+}
+
+.cursos {
+  background-color: #090909;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  flex: 1; /*Pra ficar um do lado do outro*/
+  display: flex;
+  flex-direction: column;
+}
+.cursos h3 {
+  font-size: 1.125rem;
+}
+
+.curso-nome {
+  flex: 1;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  font-size: 1.125rem;
+  position: relative; /* para coloar o detalhe */
+}
+
+.curso-nome::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(180deg, #fa3f2f 0%, #9b1509 100%);
+  position: absolute;
+  left: -24px;
+}
+
+.curso-tipo {
+  text-transform: uppercase;
+  color: #5c5c5c;
+  margin-bottom: 10px; /*o valor nao aplica, pois é um span*/
+}
+
+.curso-local {
+  /*os itens nao estao alinhados em baixo, entao eu defini um display flex e flexdirection lá em cima, e depois eu faço o curso nome ser flex 1, para ele crescer o máximo que puder para ocupar o conteudo, que no caso é o local */
+  color: #5c5c5c;
+}
+
+.form-extra {
+  margin-top: 60px;
+}
+
+.cursos-intensivos {
+  margin-bottom: 60px;
+}
+
+.form-extra h3 {
+  font-size: 0.875rem;
+  line-height: 1;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #707070;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.cursos-intensivos h3::before {
+  content: "";
+  display: block;
+  background: url("/img/cursos.svg") no-repeat;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -36px;
+  top: -2px;
+}
+
+.cursos-intensivos li {
+  margin-bottom: 20px;
+  font-size: 1.125rem;
+}
+
+.cursos-intensivos span {
+  color: #707070;
+}
+
+.cursos-intensivos li {
+  display: flex; /* Para alinhar as horas no canto direito */
+  justify-content: space-between;
+}
+.idiomas h3::before {
+  content: "";
+  display: block;
+  background: url("/img/idiomas.svg") no-repeat;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -36px;
+  top: -2px;
+}
+
+.idiomas span {
+  color: #707070;
+}
