@@ -93,7 +93,7 @@
 .cursos-intensivos h3::before {
   content: "";
   display: block;
-  background: url("/img/cursos.svg") no-repeat;
+  background: url("./img/cursos.svg") no-repeat;
   width: 24px;
   height: 24px;
   position: absolute;
@@ -117,7 +117,7 @@
 .idiomas h3::before {
   content: "";
   display: block;
-  background: url("/img/idiomas.svg") no-repeat;
+  background: url("./img/idiomas.svg") no-repeat;
   width: 24px;
   height: 24px;
   position: absolute;
