@@ -1,6 +1,7 @@
 .formacao {
   background-color: #141414;
   color: #fff;
+  position: relative;
 }
 
 .form-container {
@@ -9,11 +10,23 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  justify-content: center;
+
+  position: relative;
+}
+
+.form-container::after {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 100px;
+  background: url(../img/detalhe.svg) no-repeat center;
+  position: absolute;
+  bottom: -50px;
 }
 
 .formacao .subtitulo {
   color: #000;
+  max-width: 5ch;
 }
 
 .form-texto {
@@ -93,7 +106,7 @@
 .cursos-intensivos h3::before {
   content: "";
   display: block;
-  background: url("/img/cursos.svg") no-repeat;
+  background: url("../img/cursos.svg") no-repeat;
   width: 24px;
   height: 24px;
   position: absolute;
@@ -117,7 +130,7 @@
 .idiomas h3::before {
   content: "";
   display: block;
-  background: url("/img/idiomas.svg") no-repeat;
+  background: url("../img/idiomas.svg") no-repeat;
   width: 24px;
   height: 24px;
   position: absolute;
@@ -127,4 +140,29 @@
 
 .idiomas span {
   color: #707070;
+}
+
+@media (max-width: 800px) {
+  .form-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .form-container .subtitulo {
+    font-size: 3rem;
+    max-width: initial;
+    color: #fff;
+  }
+  .form-container .form-texto {
+    font-size: 1.125rem;
+  }
+  .form-extra h3::before {
+    position: initial;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .form-container .subtitulo {
+    font-size: 2.5rem;
+  }
 }
