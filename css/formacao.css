@@ -10,7 +10,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
-
+  gap: 20px;
   position: relative;
 }
 
@@ -27,12 +27,14 @@
 .formacao .subtitulo {
   color: #000;
   max-width: 5ch;
+  margin-top: 50px;
 }
 
 .form-texto {
   font-size: 1.5rem;
   line-height: 1.33;
   margin-bottom: 60px;
+  margin-top: 60px;
   max-width: 40ch; /* O texto vai ficar sempre nesse tamanho máximo */
 }
 
